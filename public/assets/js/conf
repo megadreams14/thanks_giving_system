@@ -1,0 +1,6 @@
+module.exports = {
+      DATABASE: 'thanksgiving',
+      MYSQL_USER: 'root',
+      MYSQL_PASS: 'root',
+      LOGIN_PASS: 'root'
+};
