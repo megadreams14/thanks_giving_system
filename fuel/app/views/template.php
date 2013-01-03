@@ -6,16 +6,12 @@
     <title><?php // echo $title; ?></title>
     <?php echo Asset::css('bootstrap.css'); ?>
     <?php echo Asset::css('content.css'); ?>        
+    <?php echo Asset::js('jquery.js'); ?>
+    <?php echo Asset::js('socket.io.js'); ?>
+
 </head>
 <body>
-    <div class="main-contents">
-        <h1>お名前を入力して下さい</h1>
-        <form action="" method="GET">
-            <input type="text" name="user_name">
-            <input type="submit" value="送信">
-        </form>
-    </div>
-    
+    <?php echo $content; ?>
     <footer>
         <p>
             <small>Copyright © 2012- <?php echo date('y');?> megadreams</small>

@@ -3,7 +3,11 @@ use Orm\Model;
 
 class Model_Question_Info extends Model
 {
-	protected static $_properties = array(
+        protected static$_has_many = array(
+            'question_lists'
+        );
+        
+        protected static $_properties = array(
 		'id',
 		'title',
 		'description',

@@ -116,7 +116,7 @@ class Controller_Admin_Question_Mst extends Controller_Template
 				Session::set_flash('error', $val->error());
 			}
 
-			$this->template->set_global('admin_question_mst', $question_mst, false);
+			$this->template->set_global('question_mst', $question_mst, false);
 		}
 
 		$this->template->title = "問題編集画面";

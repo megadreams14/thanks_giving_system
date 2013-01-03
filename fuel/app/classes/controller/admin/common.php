@@ -13,11 +13,11 @@ class Controller_Admin_Common extends \Controller_Template {
     protected $view_data;
     
     public function before() {
-        //親クラスのbeforeを呼び出して, $this->templateを使えるようにしてもらう
-        parent::before();
         $this->admin_flag = true;
 
-        
+        //親クラスのbeforeを呼び出して, $this->templateを使えるようにしてもらう
+        parent::before();
+
         //その他のinitialze
         $this->context  = array();
         $this->plus_css = array();

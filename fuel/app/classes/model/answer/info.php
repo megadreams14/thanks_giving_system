@@ -7,6 +7,9 @@ class Model_Answer_Info extends Model
 		'id',
 		'user_profile_mst_id',
 		'question_list_id',
+                'answer',
+                'user_name',
+                'time',
 		'created_at',
 		'updated_at',
 	);

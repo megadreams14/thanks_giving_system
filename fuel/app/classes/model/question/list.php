@@ -1,8 +1,9 @@
 <?php
 use Orm\Model;
 
-class Model_Question_List extends Model
-{
+class Model_Question_List extends Model {
+
+        
 	protected static $_properties = array(
 		'id',
 		'question_infos_mst_id',

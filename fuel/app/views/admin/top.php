@@ -1,45 +1,19 @@
 <h1>登録問題一覧</h1>
-<br>
-<?php if ($view_data['question_mst']): ?>
-<table class="table table-striped">
-	<thead>
-		<tr>
-			<th>問題文</th>
-			<th>答え</th>
-			<th>選択肢A</th>
-			<th>選択肢b</th>
-			<th>選択肢c</th>
-			<th>選択肢d</th>
-			<th>問題タイプ</th>
-			<th>ビュータイプ</th>
-			<th>動画パス</th>
-		</tr>
-	</thead>
-	<tbody>
-<?php foreach ($view_data['question_mst'] as $question_mst): ?>		<tr>
 
-			<td><?php echo $question_mst->question; ?></td>
-			<td><?php echo $question_mst->answer; ?></td>
-			<td><?php echo $question_mst->select_a; ?></td>
-			<td><?php echo $question_mst->select_b; ?></td>
-			<td><?php echo $question_mst->select_c; ?></td>
-			<td><?php echo $question_mst->select_d; ?></td>
-			<td><?php echo $question_mst->question_type_mst_id; ?></td>
-			<td><?php echo $question_mst->view_type_mst_id; ?></td>
-			<td><?php echo $question_mst->movies_path; ?></td>
-			<td>
-				<?php echo Html::anchor('admin/question/mst/view/'.$question_mst->id, 'View'); ?> |
-				<?php echo Html::anchor('admin/question/mst/edit/'.$question_mst->id, 'Edit'); ?> |
-				<?php echo Html::anchor('admin/question/mst/delete/'.$question_mst->id, 'Delete', array('onclick' => "return confirm('Are you sure?')")); ?>
+<p>出題する問題イベントを選択して下さい</p>
 
-			</td>
-		</tr>
-<?php endforeach; ?>	</tbody>
-</table>
+<?php if ($view_data['question_info']): ?>
 
+    <form action="top/operation" method="GET">
+        <select name="question_info_id">
+            <?php foreach ($view_data['question_info'] as $question_info):?>
+                <option value="<?php echo $question_info->id; ?>"><?php echo $question_info->title;?></option>
+            <?php endforeach; ?>
+        </select>
+        <input type="submit" value="この問題を出題する">
+    </form>
 <?php else: ?>
-<p>No Question_msts.</p>
-
+    <p>問題リストがありません.</p>
 <?php endif; ?><p>
 
 </p>
